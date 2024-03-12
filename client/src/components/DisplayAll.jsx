@@ -48,7 +48,7 @@ const DisplayAll = (props) => {
                 <div key={task._id} className="task-card">
                     <h4>{task.taskTitle}</h4>
                     <h5>{task.location}</h5>
-                    <h5>{task.price}</h5>
+                    <h5>${task.price}</h5>
                     <h6>{task.description}</h6>
                     <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                         <div className="button2"><Link to={`/edit/${task._id}`} onClick={playSound}>Edit</Link></div>

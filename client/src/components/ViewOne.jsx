@@ -48,9 +48,10 @@ const ViewOne = (prop) => {
                 </div>
             </div>
             <div className="task-card2">
-                <h2>  {task.name} </h2>
-                <h2>  {task.description} </h2>
-                <h2>  {task.category} </h2>
+                <h2>  {task.taskTitle} </h2>
+                <h3> $ {task.price} </h3>
+                <h3>  {task.location} </h3>
+                <h3>  {task.description} </h3>
                 <button class="button" onClick={deleteHandler} > Delete </button>
             </div>
 
