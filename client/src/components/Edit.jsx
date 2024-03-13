@@ -102,7 +102,7 @@ const Edit = (props) => {
                         }
                     </div>
                     <div>
-                        <button class="button" type="submit" onClick={playSound}> Submit </button>
+                        <button className="button" type="submit" onClick={playSound}> Submit </button>
                     </div>
                 </form>
             </div>
