@@ -1,13 +1,19 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
+const express = require('express')
+const app = express()
+const cors = require('cors')
+app.use(cors({origin:'http://localhost:5173/', credentials:true}))
+app.use(express.json(), express.urlencoded({ extended: true }))
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-require('./config/mongoose.config');
-require('./routes/task.routes')(app);
+const cookieParser = require('cookie-parser')
+app.use(cookieParser(process.env.SECRET_KEY))
 
-app.listen(8000, () => {
-    console.log("Listening at Port 8000")
-})
+require('dotenv').config();
+
+require('./config/mongoose.config')
+
+require('./routes/task.routes')(app)
+
+const userRoutes = require('./routes/user.routes')
+userRoutes(app)
+
+app.listen(8000, () => console.log ('Server is running on port 8000'))
