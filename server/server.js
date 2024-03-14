@@ -10,6 +10,7 @@ app.use(cookieParser(process.env.SECRET_KEY))  //secret key
 require('dotenv').config();
 
 require('./config/mongoose.config');
+
 require('./routes/task.routes')(app)
 
 const userRoutes = require('./routes/user.routes')
