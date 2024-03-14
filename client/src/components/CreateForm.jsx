@@ -39,7 +39,7 @@ const CreateForm = (props) => {
 
 
     return (
-        <div>
+        <div className="container">
             <div className="display-all-container">
                 <div className="display-all-link">
                     <Link to="/" onClick={playSound2}>Home</Link>
@@ -52,7 +52,7 @@ const CreateForm = (props) => {
                 </div>
             </div>
             <form onSubmit={submitHandler} className="task-card2">
-                <div style={{ padding: '10px', margin: '10px', fontSize: '24px'}}>
+                <div style={{ padding: '7px', margin: '7px', fontSize: '24px'}}>
                     <label> Title: </label>
                     <br />
                     <input type="text" onChange={(e)=> setTaskTitle(e.target.value)} value={taskTitle}/>
@@ -62,7 +62,7 @@ const CreateForm = (props) => {
                         null
                     }
                 </div>
-                <div style={{ padding: '10px', margin: '10px', fontSize: '24px'}}>
+                <div style={{ padding: '7px', margin: '7px', fontSize: '24px'}}>
                     <label> Description: </label>
                     <br />
                     <input type="text" onChange={(e)=> setDescription(e.target.value)} value={description}/>
@@ -72,7 +72,7 @@ const CreateForm = (props) => {
                         null
                     }
                 </div>
-                <div style={{ padding: '10px', margin: '10px', fontSize: '24px'}}>
+                <div style={{ padding: '7px', margin: '7px', fontSize: '24px'}}>
                     <label> Price: </label>
                     <br />
                     <input type="number" onChange={(e)=> setPrice(e.target.value)} value={price}/>
@@ -82,7 +82,7 @@ const CreateForm = (props) => {
                         null
                     }
                 </div>
-                <div style={{ padding: '10px', margin: '10px', fontSize: '24px'}}>
+                <div style={{ padding: '7px', margin: '7px', fontSize: '24px'}}>
                     <label> Location: </label>
                     <br />
                     <input type="text" onChange={(e)=> setLocation(e.target.value)} value={location}/>
