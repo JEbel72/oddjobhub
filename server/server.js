@@ -5,12 +5,11 @@ app.use(cors({origin:'http://localhost:5173', credentials:true}))
 app.use(express.json(), express.urlencoded({ extended: true }))
 
 const cookieParser = require('cookie-parser')
-app.use(cookieParser(process.env.SECRET_KEY))
+app.use(cookieParser(process.env.SECRET_KEY))  //secret key
 
 require('dotenv').config();
 
-require('./config/mongoose.config')
-
+require('./config/mongoose.config');
 require('./routes/task.routes')(app)
 
 const userRoutes = require('./routes/user.routes')

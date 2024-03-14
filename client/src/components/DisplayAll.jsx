@@ -29,7 +29,7 @@ const DisplayAll = (props) => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <div className="display-all-container">
                 <div className="display-all-link">
                     <Link to="/" onClick={playSound}>Home</Link>
